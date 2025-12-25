@@ -1,0 +1,7 @@
+(define-lw-system lw-string ()
+  (:system "lw-ppcre")
+  (:system "lw-date")
+  (:file "package")
+  (:file "english" :depends-on "package")
+  (:file "string" :depends-on "package")
+  (:file "conv" :depends-on "package"))
