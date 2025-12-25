@@ -2,6 +2,11 @@
   (:use :cl)
   (:export "STRING!" "STRING?" "INTEGER!" "INTEGER?" "MONEY!" "MONEY?" "BOOLEAN!" "FLOAT!" "FLOAT?"))
 
+(defpackage :dict
+  (:use :cl)
+  (:export "COPY-HASH-TABLE" "MAPHASH*" "MAKE-HASH-TABLE-FROM-ALIST" "MAKE-HASH-TABLE-FROM-PLIST" "DICTIONARY" "DICTIONARY*" "DICTIONARY-IF"
+           "MAP-DICTIONARY" "MAPCAN-DICTIONARY"))
+
 (defpackage :english 
   (:use :cl)
   (:export "VOWELP" "PLURALISE-WORD" "FORMAT-PHONE-NUMBER" "NORMALISE-PHONE-NUMBER" "FORMAT-ABN" "MAKE-ABN" 
