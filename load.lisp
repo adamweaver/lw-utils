@@ -3,6 +3,6 @@
   (:system "lw-date")
   (:file "conv" :depends-on "package")
   (:file "dict" :depends-on "package")
-  (:file "english" :depends-on "package")
+  (:file "english" :depends-on "string")
   (:file "package")
   (:file "string" :depends-on "package"))
