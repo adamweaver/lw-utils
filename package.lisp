@@ -1,19 +1,65 @@
 (defpackage :conv
   (:use :cl)
-  (:export "STRING!" "STRING?" "INTEGER!" "INTEGER?" "MONEY!" "MONEY?" "BOOLEAN!" "FLOAT!" "FLOAT?"))
+  (:export
+   "BOOLEAN!"
+   "FLOAT!"
+   "FLOAT?"
+   "INTEGER!"
+   "INTEGER?"
+   "MONEY!"
+   "MONEY?"
+   "STRING!"
+   "STRING?"))
 
 (defpackage :dict
   (:use :cl)
-  (:export "COPY-HASH-TABLE" "MAPHASH*" "MAKE-HASH-TABLE-FROM-ALIST" "MAKE-HASH-TABLE-FROM-PLIST" "DICTIONARY" "DICTIONARY*" "DICTIONARY-IF"
-           "MAP-DICTIONARY" "MAPCAN-DICTIONARY"))
-
-(defpackage :english 
-  (:use :cl)
-  (:export "VOWELP" "PLURALISE-WORD" "FORMAT-PHONE-NUMBER" "NORMALISE-PHONE-NUMBER" "FORMAT-ABN" "MAKE-ABN" 
-           "MAKE-PHONE-NUMBER" "MAKE-EMAIL-ADDRESS"))
+  (:export
+   "COPY-HASH-TABLE"
+   "DICTIONARY"
+   "DICTIONARY*"
+   "DICTIONARY-IF"
+   "MAKE-HASH-TABLE-FROM-ALIST"
+   "MAKE-HASH-TABLE-FROM-OBJECT"
+   "MAKE-HASH-TABLE-FROM-PLIST"
+   "MAP-DICTIONARY"
+   "MAPCAN-DICTIONARY"
+   "MAPHASH*"))
 
 (defpackage :utils
   (:use :cl)
-  (:export "CASE*" "STRCAT" "STRCAT-ADJACENT" "JOIN" "LEFT-PAD" "URLIFY" "RANDOM-ALPHA-ASCII-STRING" "STARTS-WITH" "ENDS-WITH" "&" "&&" "MATCH"
-           "COMPOSE" "PARTIAL" "PARTIAL*" "REVERSE-C-BYTE-ORDER" "GROUP*" "FLATTEN" "INTERSPERSE" "MKLIST" "UNCONS" "NSUBSEQ"))
+  (:export
+   "&"
+   "&&"
+   "CASE*"
+   "COMPOSE"
+   "ENDS-WITH"
+   "FLATTEN"
+   "GROUP*"
+   "INTERSPERSE"
+   "JOIN"
+   "LEFT-PAD"
+   "MATCH"
+   "MKLIST"
+   "NSUBSEQ"
+   "PARTIAL"
+   "PARTIAL*"
+   "RANDOM-ALPHA-ASCII-STRING"
+   "REVERSE-C-BYTE-ORDER"
+   "STARTS-WITH"
+   "STRCAT"
+   "STRCAT-ADJACENT"
+   "UNCONS"
+   "URLIFY"))
+
+(defpackage :english 
+  (:use :cl :utils)
+  (:export
+   "FORMAT-ABN"
+   "FORMAT-PHONE-NUMBER"
+   "MAKE-ABN" 
+   "MAKE-EMAIL-ADDRESS"
+   "MAKE-PHONE-NUMBER"
+   "NORMALISE-PHONE-NUMBER"
+   "PLURALISE-WORD"
+   "VOWELP"))
 
